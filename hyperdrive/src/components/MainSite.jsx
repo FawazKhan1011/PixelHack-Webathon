@@ -47,7 +47,7 @@ const marqueeCars = [
   },
 ];
 
-export default function MainSite() {
+export default function Mainsite() {
   const [isPaused, setIsPaused] = useState(false);
 
     useEffect(() => {
