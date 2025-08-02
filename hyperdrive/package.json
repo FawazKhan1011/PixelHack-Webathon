@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
@@ -15,7 +15,6 @@
     "jquery.ripples": "^0.6.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-scripts": "^5.0.1",
     "react-water-wave": "^2.0.1"
   },
   "devDependencies": {
