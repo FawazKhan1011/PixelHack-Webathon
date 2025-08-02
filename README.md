@@ -56,4 +56,4 @@ hyperdrive/
 
 🌐 Live Demo
 Hosted on Vercel
-🔗 https://pixel-hack-webathon-yczk-81s65o9u0-fawazkhan1011s-projects.vercel.app/
+🔗 https://pixel-hack-webathon-yczk.vercel.app/
