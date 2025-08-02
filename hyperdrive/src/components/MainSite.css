@@ -1,0 +1,569 @@
+/* Font loading example: */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;700&display=swap');
+
+* {
+  pointer-events: auto !important;
+}
+:root {
+  --jet-black: #0D0D0D;
+  --white: #FFFFFF;
+  --silver: #BFBFBF;
+  --dark-grey: #2E2E2E;
+  --pale-silver: #E6E6E6;
+  --glass: rgba(255,255,255,0.05);
+}
+
+body {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  margin: 0;
+  background: var(--jet-black);
+  color: var(--white);
+  font-family: 'Poppins', 'Orbitron', Arial, sans-serif;
+}
+
+.hyper-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.hyper-header {
+  width: 100%;
+  max-width: 1200px;
+  padding: 36px 24px 24px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hyper-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hyper-logo-dot {
+  width: 18px;
+  height: 18px;
+  background: var(--pale-silver);
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.hyper-title {
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.hyper-nav {
+  display: flex;
+  gap: 38px;
+}
+
+.hyper-nav a {
+  color: var(--silver);
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+.hyper-nav a:hover {
+  color: var(--pale-silver);
+}
+
+/* Hero Section */
+.hyper-hero {
+  text-align: center;
+  margin: 64px 0 48px 0;
+  max-width: 640px;
+}
+
+.hyper-headline {
+  font-size: 2.8rem;
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+}
+.highlight {
+  color: var(--pale-silver);
+}
+.semi-highlight {
+  color: var(--silver);
+}
+.hyper-description {
+  color: var(--silver);
+  font-size: 1.3rem;
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+.hyper-btn {
+  padding: 13px 38px;
+  background: var(--pale-silver);
+  color: var(--jet-black);
+  border: none;
+  border-radius: 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px 0 #2221;
+}
+.hyper-btn:hover {
+  background: var(--white);
+  box-shadow: 0 0 0 2px var(--pale-silver);
+}
+
+/* Car Showcase */
+.hyper-cars {
+  width: 100%;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+  padding: 0 24px;
+}
+@media (min-width: 850px) {
+  .hyper-cars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.hyper-car-card {
+  position: relative;
+  padding: 40px 22px 32px 22px;
+  border: 1.5px solid var(--dark-grey);
+  border-radius: 36px;
+  box-shadow: 0 8px 32px 0 #1e1e1e44;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.18s;
+  overflow: hidden;
+}
+.hyper-car-card:hover {
+  border-color: var(--pale-silver);
+  box-shadow: 0 12px 40px 0 #e6e6e633;
+  transform: scale(1.045);
+}
+
+.hyper-car-img {
+  width: 172px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 22px;
+  filter: drop-shadow(0 8px 26px #E6E6E6aa);
+  user-drag: none;
+  user-select: none;
+}
+
+.hyper-car-name {
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  letter-spacing: .06em;
+}
+.hyper-car-tag {
+  color: var(--silver);
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+.hyper-card-btn {
+  background: transparent;
+  color: var(--pale-silver);
+  border: 1.3px solid var(--dark-grey);
+  border-radius: 14px;
+  padding: 8px 32px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 4px;
+  transition: background 0.18s, color 0.14s, box-shadow 0.19s;
+  box-shadow: 0 2px 8px 0 #2222;
+}
+.hyper-card-btn:hover {
+  background: var(--pale-silver);
+  color: var(--jet-black);
+  box-shadow: 0 0 14px 2px var(--pale-silver);
+}
+.hyper-highlight-panel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(230,230,230,0.16) 60%, transparent 100%);
+  border-radius: 10px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Footer */
+.hyper-footer {
+  width: 100%;
+  padding: 48px 0 20px 0;
+  border-top: 1.5px solid var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--silver);
+  background: transparent;
+}
+.hyper-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+.hyper-logo-dot-small {
+  width: 11px;
+  height: 11px;
+  background: var(--pale-silver);
+  border-radius: 50%;
+  display: inline-block;
+}
+.hyper-footer-title {
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: .13em;
+}
+.hyper-footer-links {
+  display: flex;
+  gap: 22px;
+  font-size: 1rem;
+}
+.hyper-footer-links a {
+  color: var(--silver);
+  text-decoration: none;
+  transition: color 0.16s;
+}
+.hyper-footer-links a:hover {
+  color: var(--pale-silver);
+}
+
+/* Glassmorphism Helper */
+.glassmorph {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+}
+
+/* Marquee section container */
+.hyper-marquee-section {
+  margin: 3rem 0 6rem;
+  overflow: hidden;
+  position: relative;
+  background: #0D0D0D;
+  border-top: 1.5px solid #2E2E2E;
+  border-bottom: 1.5px solid #2E2E2E;
+  padding: 1rem 0;
+}
+
+/* Marquee content twice for seamless looping */
+.hyper-marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee-animation 20s linear infinite;
+  will-change: transform;
+}
+
+.hyper-marquee-content.paused {
+  animation-play-state: paused;
+}
+
+/* One iteration of marquee scroll animation */
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Each marquee item */
+.hyper-marquee-item {
+  flex: 0 0 auto;
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Image styling */
+.hyper-marquee-img {
+  max-height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  border-radius: 12px;
+}
+
+/* Zoom on hover/focus */
+.hyper-marquee-item:hover .hyper-marquee-img,
+.hyper-marquee-item:focus .hyper-marquee-img {
+  transform: scale(1.12);
+  box-shadow: 0 0 16px 3px #E6E6E6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hyper-marquee-img {
+    max-height: 60px;
+    margin: 0 0.8rem;
+  }
+  .hyper-marquee-item {
+    margin: 0 0.8rem;
+  }
+  .hyper-marquee-section {
+    margin: 2rem 0 4rem;
+  }
+}
+.hyper-car-img{
+  width: 100%;                 /* Takes full width of container */
+  max-width: 400px;            /* Limit max size */
+  height: auto;                /* Maintain aspect ratio */
+  object-fit: contain;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hyper-car-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for the marquee */
+.hyper-marquee-section {
+  overflow: hidden;
+  width: 100%;
+  background: black;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* The scrolling area */
+.hyper-marquee-content {
+  display: flex;
+  width: fit-content;
+  animation: marqueeScroll 40s linear infinite;
+  gap: 2rem;
+}
+
+/* Stop animation when hovered */
+.hyper-marquee-content.paused {
+  animation-play-state: paused;
+}
+
+/* Each car block */
+.hyper-marquee-item {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+/* Image styling */
+.hyper-marquee-img {
+  max-width: 100%;   /* Allow image to use full container */
+  width: 100%;       /* Previously 80% */
+  height: 100%;      /* Previously 80% */
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+
+.hyper-marquee-item:hover .hyper-marquee-img {
+  transform: scale(1.2);
+}
+
+/* Animation keyframes */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Heading */
+.hyper-marquee-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Car name text */
+.hyper-marquee-car-name {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+}
+
+/* General layout padding */
+.hyper-main {
+  padding: 0 1rem;
+}
+
+/* Header styling */
+.hyper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hyper-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hyper-title {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Nav Links */
+.hyper-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hyper-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Car Showcase padding */
+.hyper-cars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Car Card styling */
+.hyper-car-card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.hyper-car-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Section Wrapper */
+.hyper-car-tech-section {
+  padding: 6rem 2rem;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+/* Heading */
+.car-tech-section {
+  padding: 5rem 2rem;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.car-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.car-tech-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition: all 0.6s ease;
+}
+
+.car-tech-card.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.car-tech-card h3 {
+  font-size: 1.3rem;
+  color: #ddd;
+  margin-bottom: 0.7rem;
+}
+
+.car-tech-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+
