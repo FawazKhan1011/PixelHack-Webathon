@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Loader from "./components/loader.jsx";
-import MainSite from "./components/Mainsite.jsx";
+import MainSite from './components/MainSite.jsx';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
