@@ -2,20 +2,35 @@ import React, { useState, useEffect } from "react";
 import "./MainSite.css";
 import "./team.css";
 
+import jesko from "../assets/jesko.png";
+import huayra from "../assets/huayra.png";
+import bolide from "../assets/bolide.png";
+
+import ferrari from "/src/assets/ferrari.png";
+import p1 from "/src/assets/p1.png";
+import aventador from "/src/assets/aventador.png";
+import zonda from "/src/assets/zonda.png";      
+import agera from "/src/assets/agera.png";
+import chiron from "/src/assets/chiron.png";
+
+import lena from "/src/assets/pfp/leo.jpeg";
+import meri from "/src/assets/pfp/jack.jpeg";
+import leo from "/src/assets/pfp/meri.jpeg";
+import P1 from "/src/assets/pfp/p1.jpeg";
 const cars = [
   {
     name: "Koenigsegg Jesko",
-    image: '/src/assets/jesko.png',
+    image: jesko,
     tagline: "Relentless Power. Limitless Innovation.",
   },
   {
     name: "Pagani Huayra R",
-    image: "/src/assets/huayra.png",
+    image: huayra,
     tagline: "Artisan Craft, Unmatched Performance.",
   },
   {
     name: "Bugatti Bolide",
-    image: "/src/assets/bolide.png",
+    image: bolide,
     tagline: "Speed Unleashed. Beyond Imagination.",
   },
 ];
@@ -23,27 +38,27 @@ const cars = [
 const marqueeCars = [
   {
     name: "Ferrari LaFerrari",
-    image: "/src/assets/ferrari.png",
+    image: ferrari,
   },
   {
     name: "McLaren P1",
-    image: "/src/assets/p1.png",
+    image: p1,
   },
   {
     name: "Lamborghini Aventador",
-    image: "/src/assets/aventador.png",
+    image: aventador,
   },
   {
     name: "Pagani Zonda",
-    image: "/src/assets/zonda.png",
+    image: zonda,
   },
   {
     name: "Koenigsegg Agera",
-    image: "/src/assets/agera.png",
+    image: agera,
   },
   {
     name: "Bugatti Chiron",
-    image: "/src/assets/chiron.png",
+    image: chiron,
   },
 ];
 
@@ -172,22 +187,22 @@ export default function Mainsite() {
                 {
                   name: "Lena Marquez",
                   role: "UI/UX & Animation",
-                  image: "/src/assets/pfp/jack.jpeg",
+                  image: lena,
                 },
                 {
                   name: "Matteo Rinaldi",
                   role: "Frontend Engineer",
-                  image: "/src/assets/pfp/meri.jpeg",
+                  image: meri,
                 },
                 {
                   name: "Jack Holland",
                   role: "3D Artist",
-                  image: "/src/assets/pfp/leo.jpeg",
+                  image: leo,
                 },
                 {
                   name: "Leo Roberts",
                   role: "Performance Optimizer",
-                  image: "/src/assets/pfp/p1.jpeg",
+                  image: P1,
                 },
               ].map((member, index) => (
                 <div
